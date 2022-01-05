@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp.Items
 {
-    class BasicItem : Item
+    public class BasicItem : Item
     {
         public int DecrementValue { get; set; } = 1;
 

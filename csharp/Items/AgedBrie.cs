@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp.Items
 {
-    public class ConjuredItem : BasicItem
+    public class AgedBrie : BasicItem
     {
         public override void UpdateQuality()
         {
@@ -14,13 +14,13 @@ namespace csharp.Items
             {
                 SellIn--;
 
-                if (Quality >= DecrementValue * 2)
-                    Quality -= DecrementValue * 2;
+                if (Quality <= 50 - DecrementValue)
+                    Quality += DecrementValue;
             }
             else if (SellIn == 0)
             {
-                if (Quality >= DecrementValue * 4)
-                    Quality -= DecrementValue * 4;
+                if (Quality <= 50 - 2 * DecrementValue)
+                    Quality += 2 * DecrementValue;
             }
         }
     }

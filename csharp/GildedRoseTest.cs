@@ -96,5 +96,35 @@ namespace csharp
 
             Assert.IsTrue(item.SellIn >= 0);
         }
+
+        [Test]
+        public void AgedBrie_Quality_Increments_Correctly()
+        {
+            var item = new AgedBrie { Name = "Aged Brie", SellIn = 2, Quality = 0 };
+
+            item.UpdateQuality();
+
+            Assert.AreEqual(1, item.Quality);
+        }
+
+        [Test]
+        public void AgedBrie_Quality_Never_Above_Fifty()
+        {
+            var item = new AgedBrie { Name = "Aged Brie", SellIn = 2, Quality = 49 };
+
+            item.UpdateQuality();
+
+            Assert.IsTrue(item.Quality <= 50);
+        }
+
+        [Test]
+        public void LegendaryItem_Quality_Never_Changes()
+        {
+            var item = new LegendaryItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80 };
+
+            item.UpdateQuality();
+
+            Assert.AreEqual(80, item.Quality);
+        }
     }
 }
