@@ -1,5 +1,6 @@
 ﻿namespace csharp
 {
+    // Would prefer using abstract class with abstract method UpdateQuality, instead using virtual method or repeating same code/method
     public class Item
     {
         public string Name { get; set; }
