@@ -126,5 +126,35 @@ namespace csharp
 
             Assert.AreEqual(80, item.Quality);
         }
+
+        [Test]
+        public void BackstagePass_Increments_Correctly()
+        {
+            var item = new BackstagePass { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 20 };
+
+            item.UpdateQuality();
+
+            Assert.AreEqual(21, item.Quality);
+        }
+
+        [Test]
+        public void BackstagePass_Increments_Correctly_10_Days_Remaining()
+        {
+            var item = new BackstagePass { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 20 };
+
+            item.UpdateQuality();
+
+            Assert.AreEqual(22, item.Quality);
+        }
+
+        [Test]
+        public void BackstagePass_Increments_Correctly_5_Days_Remaining()
+        {
+            var item = new BackstagePass { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 20 };
+
+            item.UpdateQuality();
+
+            Assert.AreEqual(23, item.Quality);
+        }
     }
 }

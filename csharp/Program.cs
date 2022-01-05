@@ -40,24 +40,24 @@ namespace csharp
                     SellIn = -1, 
                     Quality = 80
                 },
-                //new Item
-                //{
-                //    Name = "Backstage passes to a TAFKAL80ETC concert",
-                //    SellIn = 15,
-                //    Quality = 20
-                //},
-                //new Item
-                //{
-                //    Name = "Backstage passes to a TAFKAL80ETC concert",
-                //    SellIn = 10,
-                //    Quality = 49
-                //},
-                //new Item
-                //{
-                //    Name = "Backstage passes to a TAFKAL80ETC concert",
-                //    SellIn = 5,
-                //    Quality = 49
-                //},
+                new BackstagePass
+                {
+                    Name = "Backstage passes to a TAFKAL80ETC concert",
+                    SellIn = 15,
+                    Quality = 20
+                },
+                new BackstagePass
+                {
+                    Name = "Backstage passes to a TAFKAL80ETC concert",
+                    SellIn = 10,
+                    Quality = 49
+                },
+                new BackstagePass
+                {
+                    Name = "Backstage passes to a TAFKAL80ETC concert",
+                    SellIn = 5,
+                    Quality = 49
+                },
 				// this conjured item does not work properly yet
 				new ConjuredItem {
                     Name = "Conjured Mana Cake",
